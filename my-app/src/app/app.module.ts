@@ -11,7 +11,8 @@ import { CalculatriceComponent } from './basic/calculatrice/calculatrice.compone
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    TabsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

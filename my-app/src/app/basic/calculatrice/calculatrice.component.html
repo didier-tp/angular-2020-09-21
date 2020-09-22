@@ -3,4 +3,11 @@ x: <input type="text" [(ngModel)]="x" /> <br/>
 y: <input type="text" [(ngModel)]="y" /> <br/>
 <input type="button" value="addition" (click)="onAdditionner()" /><br/>
 <input type="button" value="mutliplication" (click)="onMultiplier()" /><br/>
-resultat : {{res}}
+resultat : <span [style.color]="res>=0 ? 'green' : 'red' ">{{res}}</span>
+<!--
+x: <input type="text" [(ngModel)]="dataCalcul.x" /> <br/>
+y: <input type="text" [(ngModel)]="dataCalcul.y" /> <br/>
+<input type="button" value="addition" (click)="onAdditionner()" /><br/>
+<input type="button" value="mutliplication" (click)="onMultiplier()" /><br/>
+resultat : <span [style.color]="dataCalcul.res>=0 ? 'green' : 'red' ">{{dataCalcul.res}}</span>
+-->

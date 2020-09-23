@@ -8,7 +8,7 @@ import { PreferencesService } from '../common/service/preferences.service';
 })
 export class FooterComponent implements OnInit {
 
-  public listeCouleurs : string[] = [ "blank" , "yellow" , "grey" , "red" , "blue" , "green"];
+  public listeCouleurs : string[] = [ "white" , "yellow" , "grey" , "red" , "blue" , "green"];
 
   constructor(public preferencesServices : PreferencesService ) { }
 

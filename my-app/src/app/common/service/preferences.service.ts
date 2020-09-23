@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class PreferencesService {
 
-  public couleurFondPreferee : string = "blank"; //valeur par defaut
+  public couleurFondPreferee : string = "white"; //valeur par defaut
 
   constructor() { }
 }

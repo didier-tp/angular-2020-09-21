@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviseService } from '../common/service/devise.service';
 import { Devise } from '../common/data/devise';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-conversion',

@@ -34,7 +34,9 @@ export class DeviseService {
 */
   public getAllDevises() : Observable < Devise[] > {
        //return of(this.listeDevises);
-       let wsUrl = "http://localhost:8282/devise-api/public/devise";
+      // let wsUrl = "http://localhost:8282/devise-api/public/devise";
+      let wsUrl = "./devise-api/public/devise";
+      //URL relative possible dès la phase de dev via ng serve --proxy-config proxy.conf.json
        return this.http.get<Devise[]>(wsUrl);
   }
 
@@ -42,8 +44,9 @@ export class DeviseService {
     // return of(montant * 1.1234); //simulation rapide   
        /* let wsUrl = "http://localhost:8282/devise-api/public/convert?source="
                    +codeDevSource+"&target=" +codeDevCible + "&amount=" + montant ; */
-      let wsUrl = `http://localhost:8282/devise-api/public/convert?source=${codeDevSource}&target=${codeDevCible}&amount=${montant}` ;
-       
+     // let wsUrl = `http://localhost:8282/devise-api/public/convert?source=${codeDevSource}&target=${codeDevCible}&amount=${montant}` ;
+      let wsUrl = `./devise-api/public/convert?source=${codeDevSource}&target=${codeDevCible}&amount=${montant}` ;
+       //URL relative possible dès la phase de dev via ng serve --proxy-config proxy.conf.json
        return this.http.get<ResConv>(wsUrl)
                        .pipe(
                            map( (resConv : ResConv) => resConv.result )

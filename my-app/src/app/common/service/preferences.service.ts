@@ -5,7 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class PreferencesService {
 
-  public couleurFondPreferee : string = "white"; //valeur par defaut
+  private _couleurFondPreferee : string = "white"; //valeur par defaut
 
-  constructor() { }
+  public get couleurFondPreferee() { return this._couleurFondPreferee; }
+  public set couleurFondPreferee(c) {
+     this._couleurFondPreferee = c; 
+      localStorage.setItem("couleurFondPreferee",this._couleurFondPreferee);
+    }
+
+  constructor() { 
+    let c = localStorage.getItem("couleurFondPreferee");
+    this._couleurFondPreferee = c?c:'white' ;
+  }
 }

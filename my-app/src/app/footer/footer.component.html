@@ -1,1 +1,4 @@
-<p>footer works!</p>
+footer , couleurFond :
+<select [(ngModel)]="preferencesServices.couleurFondPreferee">
+    <option *ngFor="let c of listeCouleurs">{{c}}</option>
+</select>

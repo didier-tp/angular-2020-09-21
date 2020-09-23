@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from '../common/data/login';
+import { LoginService } from '../common/service/login.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
    this.message = "donnees saisies = " + JSON.stringify(this.login);
   }
 
-  constructor() { }
+  constructor(private loginService : LoginService) { }
 
   ngOnInit(): void {
   }

@@ -3,7 +3,7 @@ x: <input type="text" [(ngModel)]="x" /> <br/>
 y: <input type="text" [(ngModel)]="y" /> <br/>
 <input type="button" value="addition" (click)="onAdditionner()" /><br/>
 <input type="button" value="mutliplication" (click)="onMultiplier()" /><br/>
-resultat : <span [style.color]="res>=0 ? 'green' : 'red' ">{{res}}</span>
+resultat : <span [style.color]="res>=0 ? 'green' : 'red' ">{{res | number:'1.0-2'}}</span>
 <!--
 x: <input type="text" [(ngModel)]="dataCalcul.x" /> <br/>
 y: <input type="text" [(ngModel)]="dataCalcul.y" /> <br/>

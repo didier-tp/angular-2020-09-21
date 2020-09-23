@@ -18,11 +18,21 @@ export class ConversionComponent implements OnInit {
   listeDevises : Devise[]; 
 
   constructor(private deviseService : DeviseService) {
-      this.listeDevises = deviseService.getAllDevises();
+     console.log("1/debut");
+     deviseService.getAllDevises().subscribe(
+         (devisesRecherchees : Devise[])=>{ console.log("3/recup res en différé");
+                                            this.listeDevises =devisesRecherchees ; } ,
+         (error)=>{  console.log(error); }
+     );
+     console.log("2/suite sans attendre");
    }
 
    onConversion(){
-     this.montantConverti =   this.deviseService.convertir(this.montant , this.codeDevSource , this.codeDevCible );
+       this.deviseService.convertir(this.montant , this.codeDevSource , this.codeDevCible )
+                         .subscribe(
+                            (montantConv : number) => { this.montantConverti = montantConv ; } ,
+                            (error)=>{  console.log(error); }
+                         );
    }
 
   ngOnInit(): void {

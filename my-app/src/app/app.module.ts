@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ConversionComponent } from './conversion/conversion.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     TvaComponent,
     CalculatriceComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ConversionComponent
   ],
   imports: [
     BrowserModule,

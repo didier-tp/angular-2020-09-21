@@ -1,0 +1,28 @@
+installer si nécessaire nodeJs LTS (v12) avec sous partie npm
+installer si nécessaire "typescript" via npm install -g typescript
+installer si nécessaire "angular_cli" via npm install -g @angular/cli
+installer si nécessaire "visualStudioCode" (à priori pour windows 64 bits)
+--------------
+récupérer des copies/clones des referentiels git (avec projets exemples)
+cd .../tp_angular
+git clone https://github.com/didier-mycontrib/tp_node_js 
+git clone https://github.com/didier-mycontrib/angular8plus
+git clone https://github.com/didier-tp/angular-2020-09-21
+----
+dans tp_angular/tp_node_js_.../backend-tp-api lancer npm install
+dans tp_angular/angular8plus_.../exp-adv-app lancer npm install
+(et plus tard aussi dans .../ng-bs4-app et .../universal-app)
+dans tp_angular/angular-2020-09-21_.../my-app lancer npm install
+----
+on sera ainsi prêt à ouvrir un projet dans visualStudiocode 
+puis à lancer ng serve pour tester
+-----------
+
+Seulement si npm install ne fonctionne pas, et que "proxy-http" configuré sur pc d'entreprise
+peut être besoin de lancer des commandes de ce genre:
+npm config set proxy http://farm-proxysg:8080
+
+npm config set https-proxy http://farm-proxysg:8080
+
+npm config set strict-ssl false
+

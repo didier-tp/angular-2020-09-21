@@ -8,13 +8,14 @@ import { FooterComponent } from './footer/footer.component';
 import { BasicComponent } from './basic/basic.component';
 import { TvaComponent } from './basic/tva/tva.component';
 import { CalculatriceComponent } from './basic/calculatrice/calculatrice.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ConversionComponent } from './conversion/conversion.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Login2Component } from './login2/login2.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
     CalculatriceComponent,
     LoginComponent,
     WelcomeComponent,
-    ConversionComponent
+    ConversionComponent,
+    Login2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,ReactiveFormsModule,
     BrowserAnimationsModule,
     TabsModule.forRoot(),
     HttpClientModule

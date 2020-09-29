@@ -37,7 +37,10 @@ export class DeviseService {
       // let wsUrl = "http://localhost:8282/devise-api/public/devise";
       let wsUrl = "./devise-api/public/devise";
       //URL relative possible dès la phase de dev via ng serve --proxy-config proxy.conf.json
-       return this.http.get<Devise[]>(wsUrl);
+       return this.http.get<Devise[]>(wsUrl)
+                       .pipe(
+                          map( (tab) => tab.sort( (d1,d2) => (d1.change - d2.change) ) )
+                       );
   }
 
   public convertir(montant : number, codeDevSource : string , codeDevCible : string) : Observable< number >{

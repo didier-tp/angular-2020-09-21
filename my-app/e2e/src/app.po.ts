@@ -6,6 +6,10 @@ export class AppPage {
   }
 
   getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    //e1 e3 ( e3 descendant direct ou indirect de e1)
+    //e1 > e2 (e2 fils direct de e1)
+    // app-root div h1 si <div><h1>{{title}}... dans app.component.html
+    //app-root app-header #app-header-title
+    return element(by.css('app-root app-header #appHeaderTitle')).getText() as Promise<string>;
   }
 }

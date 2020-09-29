@@ -1,11 +1,11 @@
 <p>conversion</p>
 
-montant : <input type="text" [(ngModel)]="montant" /> <br/>
-deviseSource : <select [(ngModel)]="codeDevSource" > 
+montant : <input name="montant" type="text" [(ngModel)]="montant" /> <br/>
+deviseSource : <select name="codeDevSource" [(ngModel)]="codeDevSource" > 
          <option *ngFor="let d of listeDevises">{{d.code}}</option>
     </select> <br/>
-deviseCible : <select [(ngModel)]="codeDevCible" > 
+deviseCible : <select  name="codeDevCible" [(ngModel)]="codeDevCible" > 
         <option *ngFor="let d of listeDevises">{{d.code}}</option>
    </select> <br/>
 <input type="button" (click)="onConversion()" value="convertir" /> <br/>
-montantConverti : {{montantConverti}} <br/>
+montantConverti : <span id="montantConverti">{{montantConverti}}</span> <br/>

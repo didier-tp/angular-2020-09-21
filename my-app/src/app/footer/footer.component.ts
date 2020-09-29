@@ -8,9 +8,17 @@ import { PreferencesService } from '../common/service/preferences.service';
 })
 export class FooterComponent implements OnInit {
 
+  backColor : string = "white";
+
   public listeCouleurs : string[] = [ "white" , "yellow" , "grey" , "red" , "blue" , "green"];
 
-  constructor(public preferencesServices : PreferencesService ) { }
+  constructor(private preferencesServices : PreferencesService ) {
+    preferencesServices.couleurFondPrefereeObs.subscribe((c)=>this.backColor=c);
+   }
+
+  onChange(){
+    this.preferencesServices.setCouleurFondPreferee(this.backColor);
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,4 @@
 footer , couleurFond :
-<select [(ngModel)]="preferencesServices.couleurFondPreferee">
+<select [(ngModel)]="backColor" (ngModelChange)="onChange()">
     <option *ngFor="let c of listeCouleurs">{{c}}</option>
 </select>

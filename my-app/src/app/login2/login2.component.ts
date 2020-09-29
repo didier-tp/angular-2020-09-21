@@ -25,7 +25,7 @@ export class Login2Component implements OnInit {
                       (loginResponse : LoginResponse)=>{  this.message = JSON.stringify(loginResponse);     },
                       (error)=> { console.log(error); this.message ="erreur ..."}
                     );
-                  
+                 
   }
 
   constructor(private _formBuilder: FormBuilder,

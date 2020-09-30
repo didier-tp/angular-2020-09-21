@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicComponent implements OnInit {
 
+  selectedSubRoute : string ="tva"; //par defaut
+  subRoutes = [ "tva" , "calculatrice/simple" , "calculatrice/sophistiquee" ];
+
   constructor() { }
 
   ngOnInit(): void {
